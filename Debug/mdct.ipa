@@ -1,0 +1,507 @@
+IPAF version 1
+Ssef <
+G_mdct_bitreverse sid<
+>>Sptr <
+G_mdct_bitreverse ptr<
+0_|
+1_|
+2_|3_
+3_4_11_12_|
+4_|
+5_15_13_7_|
+6_8_14_16_|
+7_|
+8_|
+9_|
+10_|3_
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+>>Smust <
+G_mdct_bitreverse ptb<
+>>Scnal <
+_mdct_bitreverse <
+_mdct_bitreverse:1 [0_1_?
+_mdct_bitreverse:1 ?
+_mdct_bitreverse:2 ?
+>>Sprpc <
+_mdct_bitreverse <
+>>Ssef <
+G_mdct_butterfly_generic sid<
+>>Sptr <
+G_mdct_butterfly_generic ptr<
+0_|
+1_|
+2_|3_
+3_10_11_|
+4_14_12_6_|
+5_7_13_15_|
+6_|
+7_|
+8_|
+9_|3_
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+>>Smust <
+G_mdct_butterfly_generic ptb<
+>>Scnal <
+_mdct_butterfly_generic <
+_mdct_butterfly_generic:1 ?
+_mdct_butterfly_generic:2 ?
+_mdct_butterfly_generic:3 ?
+_mdct_butterfly_generic:4 ?
+>>Sprpc <
+_mdct_butterfly_generic <
+>>Ssef <
+G_mdct_butterfly_first sid<
+>>Sptr <
+G_mdct_butterfly_first ptr<
+0_|
+1_|
+2_|3_
+3_10_11_|
+4_14_12_6_|
+5_7_13_15_|
+6_|
+7_|
+8_|
+9_|3_
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+>>Smust <
+G_mdct_butterfly_first ptb<
+>>Scnal <
+_mdct_butterfly_first <
+_mdct_butterfly_first:1 ?
+_mdct_butterfly_first:2 ?
+_mdct_butterfly_first:3 ?
+>>Sprpc <
+_mdct_butterfly_first <
+>>Ssef <
+G_mdct_butterfly_8 sid<
+>>Sptr <
+G_mdct_butterfly_8 ptr<
+0_|
+1_|
+2_|3_
+3_4_|
+4_|
+5_|
+6_|
+7_|
+>>Smust <
+G_mdct_butterfly_8 ptb<
+>>Scnal <
+_mdct_butterfly_8 <
+_mdct_butterfly_8:1 ?
+>>Sprpc <
+_mdct_butterfly_8 <
+>>Ssef <
+G_mdct_init sid<
+DG_malloc 
+50_
+51_
+DG_logf 
+48_
+49_
+DG_floorf 
+46_
+47_
+DG_cosf 
+44_
+45_
+DG_sinf 
+42_
+43_
+>>Sptr <
+G_mdct_init ptr<
+0_|
+1_2_3_6_7_8_12_14_15_16_18_19_20_22_23_24_26_27_28_32_33_|9_10_11_34_35_
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|1_
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|
+41_|
+42_|53_1_
+43_|52_1_
+44_|53_1_
+45_|52_1_
+46_|53_1_
+47_|52_1_
+48_|53_1_
+49_|52_1_
+50_|53_1_
+51_|52_1_
+52_|54_
+53_|54_
+54_|
+>>Smust <
+G_mdct_init ptb<
+G_sinf 
+G_cosf 
+G_floorf 
+G_logf 
+G_malloc 
+>>Scnal <
+_mdct_init <
+_sinf:r ?
+_cosf:r ?
+_floorf:r ?
+_logf:r ?
+_mdct_init:1 ?
+_mdct_init:2 ?
+>>Sprpc <
+_mdct_init <
+_sinf:1 n
+_cosf:1 n
+_floorf:1 n
+_logf:1 n
+_malloc:1 n
+>>Ssef <
+G_mdct_butterfly_16 sid<
+DG_mdct_butterfly_8 
+14_
+15_
+>>Sptr <
+G_mdct_butterfly_16 ptr<
+0_|
+1_|
+2_|7_
+3_4_|
+4_|
+5_8_|
+6_9_|
+7_|3_
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|2_
+15_|2_
+>>Smust <
+G_mdct_butterfly_16 ptb<
+G_mdct_butterfly_8 t
+>>Scnal <
+_mdct_butterfly_16 <
+_mdct_butterfly_16:1 ?
+>>Sprpc <
+_mdct_butterfly_16 <
+_mdct_butterfly_8:1 n
+>>Ssef <
+G_mdct_butterfly_32 sid<
+DG_mdct_butterfly_16 
+14_
+15_
+>>Sptr <
+G_mdct_butterfly_32 ptr<
+0_|
+1_|
+2_|7_
+3_4_|
+4_|
+5_8_|
+6_9_|
+7_|3_
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|16_2_
+15_|16_2_
+16_|2_
+>>Smust <
+G_mdct_butterfly_32 ptb<
+G_mdct_butterfly_16 t
+>>Scnal <
+_mdct_butterfly_32 <
+_mdct_butterfly_32:1 ?
+>>Sprpc <
+_mdct_butterfly_32 <
+_mdct_butterfly_16:1 n
+>>Ssef <
+G_mdct_butterflies sid<
+DG_mdct_butterfly_first 
+53_
+54_
+DG_mdct_butterfly_generic 
+51_
+52_
+DG_mdct_butterfly_32 
+49_
+50_
+>>Sptr <
+G_mdct_butterflies ptr<
+0_|
+1_|
+2_|6_
+3_13_16_23_36_|
+4_40_37_24_17_14_7_|
+5_8_15_18_25_38_41_|
+6_|3_
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|3_
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|6_
+21_|
+22_|3_
+23_|
+24_|
+25_|
+26_|
+27_|3_
+28_|
+29_|
+30_|
+31_|3_
+32_|
+33_|6_
+34_|
+35_|39_
+36_|
+37_|
+38_|
+39_|3_
+40_|
+41_|
+42_|
+43_|
+44_|
+45_|3_
+46_|
+47_|
+48_|
+49_|56_55_2_
+50_|56_55_2_
+51_|12_20_
+52_|20_
+53_|31_33_
+54_|33_
+55_|2_
+56_|55_
+>>Smust <
+G_mdct_butterflies ptb<
+G_mdct_butterfly_32 t
+G_mdct_butterfly_generic t
+G_mdct_butterfly_first t
+>>Scnal <
+_mdct_butterflies <
+_mdct_butterflies:1 [1_1_?
+_mdct_butterflies:1 ?
+_mdct_butterflies:2 ?
+_mdct_butterflies:3 ?
+>>Sprpc <
+_mdct_butterflies <
+_mdct_butterfly_32:1 n
+_mdct_butterfly_generic:4 n
+_mdct_butterfly_generic:3 n
+_mdct_butterfly_generic:2 n
+_mdct_butterfly_generic:1 n
+_mdct_butterfly_first:3 n
+_mdct_butterfly_first:2 n
+_mdct_butterfly_first:1 n
+>>Ssef <
+G_mdct_clear sid<
+DG_free 
+29_
+30_
+DG___memsetD 
+27_
+28_
+>>Sptr <
+G_mdct_clear ptr<
+0_|
+1_2_3_4_9_12_13_14_17_18_19_21_22_23_|
+2_|
+3_|
+4_|
+5_15_10_7_|
+6_8_11_16_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|32_1_
+28_|31_1_
+29_|32_1_
+30_|31_1_
+31_|33_
+32_|33_
+33_|
+>>Smust <
+G_mdct_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_mdct_clear <
+___memsetD:r ?
+_mdct_clear:1 ?
+>>Sprpc <
+_mdct_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_mdct_backward sid<
+DG_mdct_butterflies 
+47_
+48_
+DG_mdct_bitreverse 
+45_
+46_
+>>Sptr <
+G_mdct_backward ptr<
+0_|
+1_|
+2_|9_
+3_4_14_15_34_|
+4_|
+5_37_35_19_16_10_7_|
+6_8_11_17_20_36_38_|
+7_|
+8_|
+9_|3_
+10_|
+11_|
+12_|
+13_|18_
+14_|
+15_|
+16_|
+17_|
+18_|3_
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|9_
+25_|
+26_|18_
+27_|
+28_|3_
+29_|
+30_|
+31_|
+32_|
+33_|3_
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|
+41_|
+42_|
+43_|
+44_|
+45_|2_13_3_
+46_|13_
+47_|53_52_51_50_3_49_24_
+48_|53_52_51_50_49_
+49_|26_
+50_|26_
+51_|26_
+52_|51_
+53_|52_
+>>Smust <
+G_mdct_backward ptb<
+G_mdct_bitreverse 
+G_mdct_butterflies t
+>>Scnal <
+_mdct_backward <
+_mdct_backward:1 [0_1_?
+_mdct_backward:1 ?
+_mdct_backward:2 ?
+_mdct_backward:3 ?
+>>Sprpc <
+_mdct_backward <
+_mdct_bitreverse:2 n
+_mdct_bitreverse:1 n
+_mdct_butterflies:3 n
+_mdct_butterflies:2 n
+_mdct_butterflies:1 n
+>>

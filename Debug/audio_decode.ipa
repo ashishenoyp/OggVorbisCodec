@@ -1,0 +1,868 @@
+IPAF version 1
+Ssef <
+G_post_window sid<
+>>Sptr <
+G_post_window ptr<
+0_|
+1_|
+2_|
+3_|
+4_|13_
+5_6_|14_13_
+6_|
+7_|
+8_|
+9_|
+10_|14_
+11_|
+12_|
+13_|
+14_|
+>>Smust <
+G_post_window ptb<
+>>Scnal <
+_post_window <
+_post_window:1 [8_1_?
+_post_window:1 [7_1_?
+_post_window:1 [6_1_?
+_post_window:1 [5_1_?
+_post_window:2 [1_1_?
+_post_window:1 [10_1_?
+_post_window:1 [9_1_?
+_post_window:1 ?
+_post_window:2 ?
+>>Sprpc <
+_post_window <
+>>Ssef <
+G_window_setup sid<
+DG_oggpack_read 
+38_
+39_
+>>Sptr <
+G_window_setup ptr<
+0_|
+1_|
+2_|45_41_6_
+3_11_18_19_26_27_|46_45_44_43_42_
+4_12_7_|
+5_8_13_|
+6_|41_
+7_|
+8_|
+9_|
+10_|3_
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|43_
+18_|
+19_|
+20_|
+21_|44_
+22_|
+23_|
+24_|
+25_|42_
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|40_3_2_
+39_|40_2_
+40_|2_
+41_|46_
+42_|
+43_|
+44_|
+45_|46_
+46_|
+>>Smust <
+G_window_setup ptb<
+G_oggpack_read t
+>>Scnal <
+_window_setup <
+_window_setup:5 [5_1_?
+_window_setup:5 [7_1_?
+_window_setup:5 [4_1_?
+_window_setup:2 [7_1_?
+_oggpack_read:r ?
+_window_setup:1 ?
+_window_setup:2 ?
+_window_setup:3 ?
+_window_setup:4 ?
+_window_setup:5 ?
+_window_setup:6 ?
+>>Sprpc <
+_window_setup <
+_oggpack_read:2 n
+_oggpack_read:1 n
+>>Ssef <
+G_floor_curve_decode sid<
+DG_ilog 
+
+
+DG_oggpack_read 
+73_
+74_
+DG_read_scalar_context 
+71_
+72_
+DG_render_point 
+
+
+>>Sptr <
+G_floor_curve_decode ptr<
+0_|
+1_|
+2_|3_
+3_4_7_14_17_29_30_38_67_68_|82_81_80_79_78_18_19_20_
+4_|
+5_42_39_34_31_15_8_|
+6_9_16_32_35_40_43_|
+7_|
+8_|
+9_|
+10_|
+11_|3_
+12_|
+13_|3_
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|3_
+23_|
+24_|3_
+25_|
+26_|
+27_|
+28_|75_33_
+29_|
+30_|
+31_|
+32_|
+33_|75_
+34_|
+35_|
+36_|
+37_|77_41_
+38_|
+39_|
+40_|
+41_|77_
+42_|
+43_|
+44_|
+45_|3_
+46_|
+47_|
+48_|
+49_|3_
+50_|
+51_|
+52_|
+53_|81_77_37_41_
+54_|
+55_|3_56_57_
+56_|
+57_|
+58_|
+59_|
+60_|
+61_|
+62_|80_
+63_|
+64_|
+65_|
+66_|78_
+67_|
+68_|
+69_|
+70_|
+71_|83_3_28_73_
+72_|83_3_74_
+73_|76_3_53_
+74_|76_53_
+75_|79_
+76_|53_
+77_|82_
+78_|
+79_|
+80_|
+81_|82_
+82_|
+83_|
+>>Smust <
+G_floor_curve_decode ptb<
+G_render_point t
+G_read_scalar_context 
+G_ilog 
+G_oggpack_read t
+>>Scnal <
+_floor_curve_decode <
+_render_point:r ?
+_read_scalar_context:r ?
+_ilog:r ?
+_oggpack_read:r ?
+_floor_curve_decode:2 [1_1_?
+_floor_curve_decode:1 ?
+_floor_curve_decode:2 ?
+_floor_curve_decode:3 ?
+_floor_curve_decode:4 ?
+_floor_curve_decode:5 ?
+>>Sprpc <
+_floor_curve_decode <
+_render_point:5 n
+_render_point:4 n
+_render_point:3 n
+_render_point:2 n
+_render_point:1 n
+_read_scalar_context:3 n
+_read_scalar_context:2 n
+_read_scalar_context:1 n
+_ilog:1 n
+_oggpack_read:2 n
+_oggpack_read:1 n
+>>Ssef <
+G_residue_curve_decode sid<
+DG___memsetD 
+99_
+100_
+DG__printf32 
+97_
+98_
+DG_read_scalar_context 
+95_
+96_
+DG_read_vector_context 
+93_
+94_
+>>Sptr <
+G_residue_curve_decode ptr<
+0_|
+1_|
+2_|19_
+3_4_5_6_7_8_24_31_50_54_55_58_60_61_62_63_66_69_70_71_72_73_76_79_90_|114_113_49_112_111_110_
+4_|
+5_|
+6_|
+7_|
+8_|
+9_77_74_67_64_56_51_35_28_25_20_17_15_13_11_|
+10_12_14_16_18_21_26_29_36_52_57_65_68_75_78_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|104_
+20_|
+21_|
+22_|
+23_|27_
+24_|
+25_|
+26_|
+27_|109_
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|37_
+34_|3_
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|
+41_|
+42_|
+43_|104_2_19_
+44_|
+45_|23_108_27_
+46_|
+47_|3_
+48_|
+49_|
+50_|
+51_|
+52_|
+53_|
+54_|
+55_|
+56_|
+57_|
+58_|
+59_|
+60_|
+61_|
+62_|
+63_|
+64_|
+65_|
+66_|
+67_|
+68_|
+69_|
+70_|
+71_|
+72_|
+73_|
+74_|
+75_|
+76_|
+77_|
+78_|
+79_|
+80_|
+81_|
+82_|
+83_|
+84_|
+85_|
+86_|112_
+87_|
+88_|
+89_|110_
+90_|
+91_|
+92_|
+93_|106_103_3_33_2_95_97_
+94_|102_101_3_33_96_98_
+95_|107_105_103_3_43_97_
+96_|107_105_101_98_
+97_|106_3_
+98_|102_3_
+99_|106_3_
+100_|102_3_
+101_|102_3_
+102_|115_
+103_|106_3_
+104_|111_
+105_|113_109_108_45_
+106_|115_
+107_|105_
+108_|109_
+109_|114_
+110_|
+111_|
+112_|
+113_|114_
+114_|
+115_|
+>>Smust <
+G_residue_curve_decode ptb<
+G_read_vector_context 
+G_read_scalar_context 
+G__printf32 
+G___memsetD 
+>>Scnal <
+_residue_curve_decode <
+_read_scalar_context:r ?
+__printf32:r ?
+___memsetD:r ?
+_residue_curve_decode:4 [1_1_?
+_residue_curve_decode:1 ~2_0_
+_residue_curve_decode:2 ?
+_residue_curve_decode:3 ?
+_residue_curve_decode:4 ?
+_residue_curve_decode:5 ?
+_residue_curve_decode:6 ?
+_residue_curve_decode:7 ?
+>>Sprpc <
+_residue_curve_decode <
+_read_vector_context:4 n
+_read_vector_context:3 n
+_read_vector_context:2 n
+_read_vector_context:1 n
+_read_scalar_context:3 n
+_read_scalar_context:2 n
+_read_scalar_context:1 n
+__printf32:1 n
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+>>Ssef <
+G_vorbis_decode_init sid<
+DG___memsetD 
+61_
+62_
+DG_malloc 
+59_
+60_
+DG_mdct_init 
+57_
+58_
+>>Sptr <
+G_vorbis_decode_init ptr<
+0_|
+1_|
+2_|3_
+3_11_12_15_18_19_20_26_27_28_29_30_32_33_34_|68_67_21_22_23_24_25_6_7_8_9_66_65_
+4_13_|
+5_14_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|68_
+38_|
+39_|67_
+40_|
+41_|
+42_|
+43_|
+44_|
+45_|
+46_|
+47_|
+48_|
+49_|
+50_|
+51_|
+52_|
+53_|
+54_|
+55_|
+56_|
+57_|64_3_59_
+58_|66_65_63_3_2_60_
+59_|64_3_
+60_|63_3_
+61_|64_3_
+62_|63_3_
+63_|69_
+64_|69_
+65_|
+66_|
+67_|
+68_|
+69_|
+>>Smust <
+G_vorbis_decode_init ptb<
+G_mdct_init 
+G___memsetD 
+G_malloc 
+>>Scnal <
+_vorbis_decode_init <
+_vorbis_decode_init:1 [7_1_?
+_vorbis_decode_init:1 [8_1_?
+___memsetD:r ?
+_vorbis_decode_init:1 [1_1_?
+_vorbis_decode_init:1 ?
+_vorbis_decode_init:2 ?
+>>Sprpc <
+_vorbis_decode_init <
+_mdct_init:2 n
+_mdct_init:1 n
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_malloc:1 n
+>>Ssef <
+G_get_spectrum sid<
+DG_render_line 
+38_
+39_
+>>Sptr <
+G_get_spectrum ptr<
+0_|
+1_|
+2_|
+3_|7_
+4_9_20_21_30_31_34_|42_41_40_
+5_22_|
+6_23_|
+7_8_|4_
+8_|
+9_|
+10_|
+11_|4_
+12_|
+13_|14_
+14_15_|4_
+15_|
+16_|
+17_|4_
+18_|
+19_|4_
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|42_
+28_|
+29_|41_
+30_|
+31_|
+32_|
+33_|40_
+34_|
+35_|
+36_|
+37_|
+38_|0_19_
+39_|19_
+40_|
+41_|
+42_|
+>>Smust <
+G_get_spectrum ptb<
+G_render_line t
+>>Scnal <
+_get_spectrum <
+_get_spectrum:1 [1_1_?
+_get_spectrum:1 ?
+_get_spectrum:2 ?
+_get_spectrum:3 ?
+_get_spectrum:4 ?
+_get_spectrum:5 ?
+>>Sprpc <
+_get_spectrum <
+_render_line:5 n
+_render_line:4 n
+_render_line:3 n
+_render_line:2 n
+_render_line:1 n
+>>Ssef <
+G_audio_decode sid<
+DG__printf32 
+175_
+176_
+DG_ilog 
+
+
+DG_oggpack_read 
+173_
+174_
+DG_window_setup 
+171_
+172_
+DG_floor_curve_decode 
+169_
+170_
+DG_residue_curve_decode 
+167_
+168_
+DG_get_spectrum 
+165_
+166_
+DG_mdct_backward 
+163_
+164_
+DG_post_window 
+161_
+162_
+>>Sptr <
+G_audio_decode ptr<
+0_|
+1_|
+2_|15_
+3_4_5_6_9_10_20_21_31_46_47_48_78_91_119_126_130_131_134_|198_197_125_196_195_194_
+4_|
+5_|
+6_|
+7_132_127_82_79_52_49_27_24_22_13_11_|
+8_12_14_23_25_28_50_53_80_83_128_133_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|194_
+16_|
+17_|
+18_|
+19_|26_
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|196_
+27_|
+28_|
+29_|
+30_|3_
+31_|
+32_|
+33_|
+34_|
+35_|3_
+36_|
+37_|3_
+38_|
+39_|3_
+40_|
+41_|
+42_|
+43_|26_
+44_|
+45_|51_
+46_|
+47_|
+48_|
+49_|
+50_|
+51_|195_
+52_|
+53_|
+54_|
+55_|15_
+56_|
+57_|61_
+58_|
+59_|
+60_|
+61_|
+62_|
+63_|
+64_|
+65_|3_
+66_|
+67_|
+68_|
+69_|71_
+70_|3_
+71_|
+72_|
+73_|
+74_|
+75_|51_
+76_|
+77_|81_
+78_|
+79_|
+80_|
+81_|198_
+82_|
+83_|
+84_|
+85_|26_
+86_|
+87_|61_
+88_|
+89_|15_
+90_|
+91_|
+92_|
+93_|
+94_|
+95_|51_
+96_|
+97_|26_
+98_|
+99_|81_
+100_|
+101_|61_
+102_|
+103_|15_
+104_|
+105_|3_
+106_|
+107_|
+108_|
+109_|51_
+110_|
+111_|26_
+112_|
+113_|81_
+114_|
+115_|61_
+116_|
+117_|15_
+118_|
+119_|
+120_|
+121_|
+122_|
+123_|3_
+124_|
+125_|
+126_|
+127_|
+128_|
+129_|
+130_|
+131_|
+132_|
+133_|
+134_|
+135_|
+136_|
+137_|197_77_113_99_81_
+138_|
+139_|3_140_
+140_|
+141_|
+142_|
+143_|
+144_|
+145_|
+146_|
+147_|
+148_|3_
+149_|
+150_|
+151_|
+152_|
+153_|
+154_|
+155_|
+156_|
+157_|
+158_|
+159_|
+160_|
+161_|19_2_3_
+162_|3_
+163_|192_191_190_188_187_186_39_3_35_37_
+164_|192_191_190_188_187_186_39_
+165_|180_43_3_45_55_
+166_|180_3_
+167_|185_184_183_182_181_3_75_85_69_89_175_
+168_|181_179_178_177_3_176_
+169_|182_97_3_95_103_173_
+170_|177_3_174_
+171_|173_117_111_3_109_
+172_|174_117_
+173_|193_3_137_
+174_|193_137_
+175_|185_3_
+176_|179_3_
+177_|178_174_176_
+178_|179_3_
+179_|199_
+180_|3_
+181_|
+182_|184_95_75_183_3_173_175_
+183_|185_3_
+184_|75_
+185_|199_
+186_|39_
+187_|189_
+188_|189_
+189_|39_
+190_|189_
+191_|190_
+192_|191_
+193_|137_
+194_|
+195_|
+196_|
+197_|198_
+198_|
+199_|
+>>Smust <
+G_audio_decode ptb<
+G_post_window 
+G_mdct_backward 
+G_get_spectrum 
+G_residue_curve_decode 
+G_floor_curve_decode 
+G_window_setup t
+G_ilog 
+G__printf32 
+G_oggpack_read t
+>>Scnal <
+_audio_decode <
+_audio_decode:2 [1_1_?
+_audio_decode:2 [8_1_?
+_audio_decode:2 [7_1_?
+_ilog:r ?
+_audio_decode:1 [6_1_?
+__printf32:r ?
+_oggpack_read:r ?
+_audio_decode:1 ?
+_audio_decode:2 ?
+_audio_decode:3 ?
+_audio_decode:4 ?
+>>Sprpc <
+_audio_decode <
+_post_window:3 n
+_post_window:2 n
+_post_window:1 n
+_mdct_backward:3 n
+_mdct_backward:2 n
+_mdct_backward:1 n
+_get_spectrum:5 n
+_get_spectrum:4 n
+_get_spectrum:3 n
+_get_spectrum:2 n
+_get_spectrum:1 n
+_residue_curve_decode:7 n
+_residue_curve_decode:6 n
+_residue_curve_decode:5 n
+_residue_curve_decode:4 n
+_residue_curve_decode:3 n
+_residue_curve_decode:2 n
+_residue_curve_decode:1 n
+_floor_curve_decode:6 n
+_floor_curve_decode:5 n
+_floor_curve_decode:4 n
+_floor_curve_decode:3 n
+_floor_curve_decode:2 n
+_floor_curve_decode:1 n
+_window_setup:6 n
+_window_setup:5 n
+_window_setup:4 n
+_window_setup:3 n
+_window_setup:2 n
+_window_setup:1 n
+_ilog:1 n
+__printf32:1 n
+_oggpack_read:2 n
+_oggpack_read:1 n
+>>

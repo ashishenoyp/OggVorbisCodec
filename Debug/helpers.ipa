@@ -1,0 +1,1173 @@
+IPAF version 1
+Ssef <
+G_delay sid<
+>>Sptr <
+G_delay ptr<
+0_|
+1_|
+2_|
+3_|
+>>Smust <
+G_delay ptb<
+>>Scnal <
+_delay <
+>>Sprpc <
+_delay <
+>>Ssef <
+G_high_neighbor sid<
+>>Sptr <
+G_high_neighbor ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|10_
+10_|4_11_
+11_12_|13_4_
+12_|
+13_|4_
+>>Smust <
+G_high_neighbor ptb<
+>>Scnal <
+_high_neighbor <
+_high_neighbor:1 ?
+_high_neighbor:2 ?
+>>Sprpc <
+_high_neighbor <
+>>Ssef <
+G_low_neighbor sid<
+>>Sptr <
+G_low_neighbor ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|10_
+10_|4_11_
+11_12_|13_4_
+12_|
+13_|4_
+>>Smust <
+G_low_neighbor ptb<
+>>Scnal <
+_low_neighbor <
+_low_neighbor:1 ?
+_low_neighbor:2 ?
+>>Sprpc <
+_low_neighbor <
+>>Ssef <
+G_render_line sid<
+>>Sptr <
+G_render_line ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|6_
+6_12_|
+7_|
+8_|
+9_|
+10_|
+11_|6_
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+>>Smust <
+G_render_line ptb<
+>>Scnal <
+_render_line <
+_render_line:1 ?
+_render_line:2 ?
+_render_line:3 ?
+_render_line:4 ?
+_render_line:5 ?
+>>Sprpc <
+_render_line <
+>>Ssef <
+G_render_point sid<
+>>Sptr <
+G_render_point ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|8_
+8_|
+9_|
+10_|
+>>Smust <
+G_render_point ptb<
+>>Scnal <
+_render_point <
+_render_point:1 ?
+_render_point:2 ?
+_render_point:3 ?
+_render_point:4 ?
+_render_point:5 ?
+>>Sprpc <
+_render_point <
+>>Ssef <
+G_ilog2 sid<
+>>Sptr <
+G_ilog2 ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|8_
+8_|3_
+>>Smust <
+G_ilog2 ptb<
+>>Scnal <
+_ilog2 <
+_ilog2:1 ?
+>>Sprpc <
+_ilog2 <
+>>Ssef <
+G_ilog sid<
+>>Sptr <
+G_ilog ptr<
+0_|
+1_|
+2_|3_
+3_|
+4_|
+5_|
+6_|
+7_|8_
+8_|3_
+>>Smust <
+G_ilog ptb<
+>>Scnal <
+_ilog <
+_ilog:1 ?
+>>Sprpc <
+_ilog <
+>>Ssef <
+G_lookup1_values sid<
+DG_powf 
+28_
+29_
+DG_floorf 
+26_
+27_
+>>Sptr <
+G_lookup1_values ptr<
+0_|
+1_2_3_9_11_12_13_16_17_18_|6_
+2_|
+3_|
+4_14_7_|
+5_8_15_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|24_
+24_|1_25_
+25_|1_
+26_|31_1_
+27_|30_1_
+28_|31_1_
+29_|30_1_
+30_|32_
+31_|32_
+32_|
+>>Smust <
+G_lookup1_values ptb<
+G_floorf 
+G_powf 
+>>Scnal <
+_lookup1_values <
+_floorf:r ?
+_powf:r ?
+_lookup1_values:1 ?
+_lookup1_values:2 ?
+>>Sprpc <
+_lookup1_values <
+_floorf:1 n
+_powf:2 n
+_powf:1 n
+>>Ssef <
+G_float32_unpack sid<
+DG_ldexpf 
+20_
+21_
+>>Sptr <
+G_float32_unpack ptr<
+0_|
+1_2_3_6_7_8_9_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|17_
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|22_1_
+21_|22_1_
+22_|
+>>Smust <
+G_float32_unpack ptb<
+G_ldexpf 
+>>Scnal <
+_float32_unpack <
+_ldexpf:r ?
+_float32_unpack:1 ?
+>>Sprpc <
+_float32_unpack <
+_ldexpf:2 n
+_ldexpf:1 n
+>>Ssef <
+G_huffman_codes sid<
+DG_malloc 
+37_
+38_
+DG___memsetD 
+35_
+36_
+>>Sptr <
+G_huffman_codes ptr<
+0_|
+1_2_3_4_10_11_12_13_14_17_20_22_23_24_|7_30_
+2_|
+3_|
+4_|
+5_18_15_8_|
+6_9_16_19_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|1_
+28_|
+29_|
+30_|7_
+31_|
+32_|
+33_|
+34_|
+35_|40_1_
+36_|39_1_
+37_|40_1_
+38_|39_1_
+39_|41_
+40_|41_
+41_|
+>>Smust <
+G_huffman_codes ptb<
+G___memsetD 
+G_malloc 
+>>Scnal <
+_huffman_codes <
+___memsetD:r ?
+_huffman_codes:1 ?
+_huffman_codes:2 ?
+>>Sprpc <
+_huffman_codes <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_malloc:1 n
+>>Ssef <
+G_read_scalar_context sid<
+DG_oggpack_read 
+46_
+47_
+DG__printf32 
+44_
+45_
+DG__exit 
+42_
+43_
+>>Sptr <
+G_read_scalar_context ptr<
+0_|
+1_2_3_6_8_12_13_16_20_32_33_34_35_|55_54_7_53_
+2_|
+3_|
+4_24_21_14_9_|
+5_10_15_22_25_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|54_52_51_23_
+20_|
+21_|
+22_|
+23_|52_51_
+24_|
+25_|
+26_|
+27_|1_
+28_|
+29_|
+30_|
+31_|53_
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|40_
+40_|41_1_
+41_|1_
+42_|49_1_
+43_|48_1_
+44_|49_1_
+45_|48_1_
+46_|50_1_19_
+47_|50_19_
+48_|56_
+49_|56_
+50_|19_
+51_|52_
+52_|55_
+53_|
+54_|55_
+55_|
+56_|
+>>Smust <
+G_read_scalar_context ptb<
+G__exit 
+G__printf32 
+G_oggpack_read t
+>>Scnal <
+_read_scalar_context <
+__printf32:r ?
+_oggpack_read:r ?
+_read_scalar_context:1 ?
+_read_scalar_context:2 ?
+_read_scalar_context:3 ?
+>>Sprpc <
+_read_scalar_context <
+__exit:1 n
+__printf32:1 n
+_oggpack_read:2 n
+_oggpack_read:1 n
+>>Ssef <
+G_read_vector_context sid<
+DG_float32_unpack 
+75_
+76_
+DG_read_scalar_context 
+73_
+74_
+DG__printf32 
+71_
+72_
+DG__exit 
+69_
+70_
+>>Sptr <
+G_read_vector_context ptr<
+0_|
+1_5_6_7_10_13_14_17_18_19_22_25_29_30_31_32_44_|88_87_0_11_86_
+2_48_45_40_37_35_33_23_20_15_8_|
+3_9_16_21_24_34_36_38_41_46_49_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|79_78_39_
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|78_
+40_|
+41_|
+42_|
+43_|85_47_83_
+44_|
+45_|
+46_|
+47_|85_
+48_|
+49_|
+50_|
+51_|1_
+52_|
+53_|
+54_|
+55_|1_
+56_|
+57_|
+58_|
+59_|
+60_|
+61_|
+62_|
+63_|1_
+64_|
+65_|
+66_|
+67_|
+68_|
+69_|81_1_
+70_|77_1_
+71_|81_1_
+72_|77_1_
+73_|82_80_69_1_28_71_
+74_|82_80_70_72_
+75_|81_1_
+76_|77_1_
+77_|89_
+78_|79_
+79_|86_
+80_|87_84_83_43_
+81_|89_
+82_|80_
+83_|84_
+84_|88_
+85_|84_
+86_|
+87_|88_
+88_|
+89_|
+>>Smust <
+G_read_vector_context ptb<
+G__exit 
+G__printf32 
+G_read_scalar_context 
+G_float32_unpack 
+>>Scnal <
+_read_vector_context <
+__printf32:r ?
+_read_scalar_context:r ?
+_float32_unpack:r ?
+_read_vector_context:1 ?
+_read_vector_context:2 ?
+_read_vector_context:3 ?
+_read_vector_context:4 ~2_0_
+>>Sprpc <
+_read_vector_context <
+__exit:1 n
+__printf32:2 n
+__printf32:1 n
+_read_scalar_context:3 n
+_read_scalar_context:2 n
+_read_scalar_context:1 n
+_float32_unpack:1 n
+>>Ssef <
+G_QuickerSort sid<
+DG_QuickerSort 
+25_
+26_
+>>Sptr <
+G_QuickerSort ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|11_14_
+11_|
+12_|
+13_|
+14_|15_
+15_16_17_|11_
+16_|
+17_|
+18_|
+19_|11_
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|2_5_
+26_|2_5_
+>>Smust <
+G_QuickerSort ptb<
+G_QuickerSort 
+>>Scnal <
+_QuickerSort <
+_QuickerSort:1 ?
+_QuickerSort:2 ?
+_QuickerSort:3 ?
+_QuickerSort:4 ?
+_QuickerSort:5 ?
+>>Sprpc <
+_QuickerSort <
+_QuickerSort:5 n
+_QuickerSort:4 n
+_QuickerSort:3 n
+_QuickerSort:2 n
+_QuickerSort:1 n
+>>Ssef <
+G_Sort sid<
+DG_QuickerSort 
+38_
+39_
+>>Sptr <
+G_Sort ptr<
+0_|
+1_|
+2_|6_
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|14_
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|22_
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|27_
+27_|
+28_|
+29_|
+30_|
+31_|27_
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|2_10_
+39_|2_10_
+>>Smust <
+G_Sort ptb<
+G_QuickerSort 
+>>Scnal <
+_Sort <
+_Sort:1 ?
+_Sort:2 ?
+_Sort:3 ?
+>>Sprpc <
+_Sort <
+_QuickerSort:5 n
+_QuickerSort:4 n
+_QuickerSort:3 n
+_QuickerSort:2 n
+_QuickerSort:1 n
+>>Ssef <
+G_vorbis_info_clear sid<
+DG___memsetD 
+20_
+21_
+>>Sptr <
+G_vorbis_info_clear ptr<
+0_|
+1_2_3_9_10_11_14_15_16_|22_6_
+2_|
+3_|
+4_12_7_|
+5_8_13_|
+6_|22_
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|23_1_
+21_|23_1_
+22_|
+23_|
+>>Smust <
+G_vorbis_info_clear ptb<
+G___memsetD 
+>>Scnal <
+_vorbis_info_clear <
+___memsetD:r ?
+_vorbis_info_clear:1 ?
+>>Sprpc <
+_vorbis_info_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+>>Ssef <
+G_vorbis_comment_clear sid<
+DG_free 
+27_
+28_
+DG___memsetD 
+25_
+26_
+>>Sptr <
+G_vorbis_comment_clear ptr<
+0_|
+1_2_3_4_10_11_12_15_16_17_19_20_21_|31_7_
+2_|
+3_|
+4_|
+5_13_8_|
+6_9_14_|
+7_|31_
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|30_1_
+26_|29_1_
+27_|30_1_
+28_|29_1_
+29_|32_
+30_|32_
+31_|
+32_|
+>>Smust <
+G_vorbis_comment_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_vorbis_comment_clear <
+___memsetD:r ?
+_vorbis_comment_clear:1 [2_1_?
+_vorbis_comment_clear:1 ?
+>>Sprpc <
+_vorbis_comment_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_vorbis_codebook_clear sid<
+DG_free 
+29_
+30_
+DG___memsetD 
+27_
+28_
+>>Sptr <
+G_vorbis_codebook_clear ptr<
+0_|
+1_2_3_4_9_12_13_14_17_18_19_21_22_23_|
+2_|
+3_|
+4_|
+5_15_10_7_|
+6_8_11_16_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|32_1_
+28_|31_1_
+29_|32_1_
+30_|31_1_
+31_|33_
+32_|33_
+33_|
+>>Smust <
+G_vorbis_codebook_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_vorbis_codebook_clear <
+___memsetD:r ?
+_vorbis_codebook_clear:1 ?
+>>Sprpc <
+_vorbis_codebook_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_vorbis_floor_clear sid<
+DG_free 
+31_
+32_
+DG___memsetD 
+29_
+30_
+>>Sptr <
+G_vorbis_floor_clear ptr<
+0_|
+1_2_3_4_7_10_11_12_15_16_17_19_20_21_|
+2_|
+3_|
+4_|
+5_13_8_|
+6_9_14_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|34_1_
+30_|33_1_
+31_|34_1_
+32_|33_1_
+33_|35_
+34_|35_
+35_|
+>>Smust <
+G_vorbis_floor_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_vorbis_floor_clear <
+___memsetD:r ?
+_vorbis_floor_clear:1 ?
+>>Sprpc <
+_vorbis_floor_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_vorbis_residue_clear sid<
+DG_free 
+27_
+28_
+DG___memsetD 
+25_
+26_
+>>Sptr <
+G_vorbis_residue_clear ptr<
+0_|
+1_2_3_4_7_10_11_12_15_16_17_19_20_21_|
+2_|
+3_|
+4_|
+5_13_8_|
+6_9_14_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|30_1_
+26_|29_1_
+27_|30_1_
+28_|29_1_
+29_|31_
+30_|31_
+31_|
+>>Smust <
+G_vorbis_residue_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_vorbis_residue_clear <
+___memsetD:r ?
+_vorbis_residue_clear:1 [2_1_?
+_vorbis_residue_clear:1 ?
+>>Sprpc <
+_vorbis_residue_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_vorbis_mapping_clear sid<
+DG_free 
+29_
+30_
+DG___memsetD 
+27_
+28_
+>>Sptr <
+G_vorbis_mapping_clear ptr<
+0_|
+1_2_3_4_9_12_13_14_17_18_19_21_22_23_|
+2_|
+3_|
+4_|
+5_15_10_7_|
+6_8_11_16_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|32_1_
+28_|31_1_
+29_|32_1_
+30_|31_1_
+31_|33_
+32_|33_
+33_|
+>>Smust <
+G_vorbis_mapping_clear ptb<
+G___memsetD 
+G_free 
+>>Scnal <
+_vorbis_mapping_clear <
+___memsetD:r ?
+_vorbis_mapping_clear:1 ?
+>>Sprpc <
+_vorbis_mapping_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_free:1 n
+>>Ssef <
+G_vorbis_setup_clear sid<
+DG_vorbis_codebook_clear 
+67_
+68_
+DG_vorbis_floor_clear 
+65_
+66_
+DG_vorbis_residue_clear 
+63_
+64_
+DG_vorbis_mapping_clear 
+61_
+62_
+DG_free 
+59_
+60_
+DG___memsetD 
+57_
+58_
+>>Sptr <
+G_vorbis_setup_clear ptr<
+0_|
+1_2_3_4_10_11_12_15_16_17_20_24_28_31_32_33_36_|71_9_
+2_|
+3_|
+4_|
+5_13_7_|
+6_8_14_|
+7_|
+8_|
+9_|71_
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|
+41_|
+42_|
+43_|
+44_|
+45_|
+46_|
+47_|
+48_|
+49_|
+50_|
+51_|
+52_|
+53_|
+54_|
+55_|
+56_|
+57_|70_1_
+58_|69_1_
+59_|70_1_
+60_|69_1_
+61_|57_1_59_
+62_|58_60_
+63_|57_1_59_
+64_|58_60_
+65_|57_1_59_
+66_|58_60_
+67_|57_1_59_
+68_|58_60_
+69_|72_
+70_|72_
+71_|
+72_|
+>>Smust <
+G_vorbis_setup_clear ptb<
+G___memsetD 
+G_vorbis_mapping_clear 
+G_vorbis_residue_clear 
+G_vorbis_floor_clear 
+G_free 
+G_vorbis_codebook_clear 
+>>Scnal <
+_vorbis_setup_clear <
+___memsetD:r ?
+_vorbis_setup_clear:1 [6_1_?
+_vorbis_setup_clear:1 [9_1_?
+_vorbis_setup_clear:1 [8_1_?
+_vorbis_setup_clear:1 [7_1_?
+_vorbis_setup_clear:1 [5_1_?
+_vorbis_setup_clear:1 ?
+>>Sprpc <
+_vorbis_setup_clear <
+___memsetD:3 n
+___memsetD:2 n
+___memsetD:1 n
+_vorbis_mapping_clear:1 n
+_vorbis_residue_clear:1 n
+_vorbis_floor_clear:1 n
+_free:1 n
+_vorbis_codebook_clear:1 n
+>>Ssef <
+G_vorbis_decode_clear sid<
+DG_mdct_clear 
+23_
+24_
+DG_free 
+21_
+22_
+>>Sptr <
+G_vorbis_decode_clear ptr<
+0_|
+1_|
+2_3_8_9_10_11_18_|28_27_
+3_|
+4_19_|
+5_20_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|27_
+15_|
+16_|28_
+17_|
+18_|
+19_|
+20_|
+21_|26_2_
+22_|25_2_
+23_|26_2_21_
+24_|25_2_22_
+25_|29_
+26_|29_
+27_|
+28_|
+29_|
+>>Smust <
+G_vorbis_decode_clear ptb<
+G_mdct_clear 
+G_free 
+>>Scnal <
+_vorbis_decode_clear <
+_vorbis_decode_clear:2 [1_1_?
+_vorbis_decode_clear:1 ?
+_vorbis_decode_clear:2 ?
+>>Sprpc <
+_vorbis_decode_clear <
+_mdct_clear:1 n
+_free:1 n
+>>

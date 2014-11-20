@@ -1,0 +1,445 @@
+IPAF version 1
+Ssef <
+G_ogg_sync_wrote sid<
+>>Sptr <
+G_ogg_sync_wrote ptr<
+0_|
+1_|
+2_|10_
+3_4_|10_
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|3_
+10_|
+>>Smust <
+G_ogg_sync_wrote ptb<
+>>Scnal <
+_ogg_sync_wrote <
+_ogg_sync_wrote:1 [4_1_?
+_ogg_sync_wrote:1 ?
+_ogg_sync_wrote:2 ?
+>>Sprpc <
+_ogg_sync_wrote <
+>>Ssef <
+G_ogg_sync_buffer sid<
+DG_incr_ptr_getbyte 
+47_
+48_
+DG_incr_ptr_putbyte 
+45_
+46_
+DG_incr_ptr_nochange 
+43_
+44_
+>>Sptr <
+G_ogg_sync_buffer ptr<
+0_|
+1_|
+2_3_6_10_11_18_24_33_41_42_|56_55_54_
+3_|
+4_28_25_14_12_|
+5_13_15_26_29_|
+6_|
+7_|
+8_|2_53_
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|2_21_
+21_|2_
+22_|
+23_|2_27_
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|53_2_
+36_|
+37_|
+38_|
+39_|54_
+40_|
+41_|
+42_|
+43_|
+44_|9_
+45_|52_50_2_
+46_|49_2_
+47_|50_2_
+48_|49_
+49_|51_
+50_|51_
+51_|56_55_52_
+52_|
+53_|2_
+54_|
+55_|56_
+56_|
+>>Smust <
+G_ogg_sync_buffer ptb<
+G_incr_ptr_nochange t
+G_incr_ptr_putbyte t
+G_incr_ptr_getbyte t
+>>Scnal <
+_ogg_sync_buffer <
+_incr_ptr_nochange:r ?
+_incr_ptr_getbyte:r ?
+_ogg_sync_buffer:1 [4_1_?
+_ogg_sync_buffer:1 [6_1_?
+_ogg_sync_buffer:1 ?
+>>Sprpc <
+_ogg_sync_buffer <
+_incr_ptr_nochange:2 n
+_incr_ptr_nochange:1 n
+_incr_ptr_putbyte:3 n
+_incr_ptr_putbyte:2 n
+_incr_ptr_putbyte:1 n
+_incr_ptr_getbyte:2 n
+_incr_ptr_getbyte:1 n
+>>Ssef <
+G_ogg_sync_pageseek sid<
+DG_incr_ptr_getbyte 
+49_
+50_
+DG_incr_ptr_nochange 
+47_
+48_
+>>Sptr <
+G_ogg_sync_pageseek ptr<
+0_|
+1_|
+2_3_6_7_8_9_16_17_18_|54_53_52_
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|2_12_
+12_|2_
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|2_12_
+21_|
+22_|
+23_|
+24_|52_
+25_|
+26_|2_
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|
+41_|
+42_|
+43_|
+44_|
+45_|
+46_|
+47_|
+48_|21_
+49_|51_2_
+50_|51_
+51_|54_53_
+52_|
+53_|54_
+54_|
+>>Smust <
+G_ogg_sync_pageseek ptb<
+G_incr_ptr_getbyte t
+G_incr_ptr_nochange t
+>>Scnal <
+_ogg_sync_pageseek <
+_ogg_sync_pageseek:1 [1_1_?
+_ogg_sync_pageseek:1 [9_1_?
+_incr_ptr_getbyte:r ?
+_ogg_sync_pageseek:1 [8_1_?
+_ogg_sync_pageseek:1 [4_1_?
+_incr_ptr_nochange:r ?
+_ogg_sync_pageseek:1 [6_1_?
+_ogg_sync_pageseek:1 ?
+>>Sprpc <
+_ogg_sync_pageseek <
+_incr_ptr_getbyte:2 n
+_incr_ptr_getbyte:1 n
+_incr_ptr_nochange:2 n
+_incr_ptr_nochange:1 n
+>>Ssef <
+G_ogg_sync_pageout sid<
+DG_ogg_sync_pageseek 
+15_
+16_
+>>Sptr <
+G_ogg_sync_pageout ptr<
+0_|
+1_|
+2_|7_
+3_4_|20_19_18_
+4_|
+5_|
+6_|
+7_|18_
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|3_
+15_|17_3_2_
+16_|17_2_
+17_|20_19_
+18_|
+19_|20_
+20_|
+>>Smust <
+G_ogg_sync_pageout ptb<
+G_ogg_sync_pageseek 
+>>Scnal <
+_ogg_sync_pageout <
+_ogg_sync_pageout:1 [16_1_?
+_ogg_sync_pageseek:r ?
+_ogg_sync_pageout:1 ?
+>>Sprpc <
+_ogg_sync_pageout <
+_ogg_sync_pageseek:1 n
+>>Ssef <
+G_ogg_stream_pagein sid<
+DG_incr_ptr 
+59_
+60_
+DG_incr_ptr_putbyte 
+57_
+58_
+DG_incr_ptr_getbyte 
+55_
+56_
+>>Sptr <
+G_ogg_stream_pagein ptr<
+0_|
+1_|
+2_|64_63_8_61_
+3_4_7_16_22_32_33_|64_63_62_
+4_|
+5_27_23_9_|
+6_10_24_28_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|3_18_35_
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|19_3_
+19_|3_
+20_|
+21_|26_3_25_
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|
+35_|36_3_
+36_|3_
+37_|
+38_|
+39_|
+40_|62_
+41_|
+42_|3_
+43_|
+44_|
+45_|
+46_|
+47_|
+48_|
+49_|
+50_|
+51_|
+52_|
+53_|
+54_|
+55_|59_3_
+56_|60_
+57_|61_3_59_
+58_|3_60_
+59_|2_
+60_|2_
+61_|
+62_|
+63_|64_
+64_|
+>>Smust <
+G_ogg_stream_pagein ptb<
+G_incr_ptr t
+G_incr_ptr_putbyte t
+G_incr_ptr_getbyte t
+>>Scnal <
+_ogg_stream_pagein <
+_incr_ptr_getbyte:r ?
+_ogg_stream_pagein:1 [15_1_?
+_ogg_stream_pagein:1 ?
+>>Sprpc <
+_ogg_stream_pagein <
+_incr_ptr:2 n
+_incr_ptr:1 n
+_incr_ptr_putbyte:3 n
+_incr_ptr_putbyte:2 n
+_incr_ptr_putbyte:1 n
+_incr_ptr_getbyte:2 n
+_incr_ptr_getbyte:1 n
+>>Ssef <
+S__packetout sid<
+DG_incr_ptr_nochange 
+25_
+26_
+>>Sptr <
+S__packetout ptr<
+0_|
+1_|
+2_3_6_10_16_17_18_19_20_21_|28_27_
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|2_
+9_|
+10_|
+11_|
+12_|
+13_|28_
+14_|
+15_|27_
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|2_
+25_|
+26_|9_
+27_|
+28_|
+>>Smust <
+S__packetout ptb<
+G_incr_ptr_nochange t
+>>Scnal <
+:__packetout <
+_incr_ptr_nochange:r ?
+:__packetout:1 ?
+:__packetout:2 ?
+:__packetout:3 =1_
+>>Sprpc <
+:__packetout <
+_incr_ptr_nochange:2 n
+_incr_ptr_nochange:1 n
+>>Ssef <
+G_ogg_stream_packetout sid<
+DS__packetout 
+34_
+35_
+>>Sptr <
+G_ogg_stream_packetout ptr<
+0_|
+1_|
+2_|6_
+3_11_19_|37_36_
+4_20_12_|
+5_13_21_|
+6_|37_
+7_|
+8_|
+9_|
+10_|14_
+11_|
+12_|
+13_|
+14_|36_
+15_|
+16_|
+17_|
+18_|3_
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|
+27_|31_
+28_|
+29_|
+30_|
+31_|
+32_|
+33_|
+34_|2_
+35_|2_10_
+36_|
+37_|
+>>Smust <
+G_ogg_stream_packetout ptb<
+S__packetout 
+>>Scnal <
+_ogg_stream_packetout <
+:__packetout:r ~1_0_l-1_h1_
+_ogg_stream_packetout:1 ?
+_ogg_stream_packetout:2 ?
+>>Sprpc <
+_ogg_stream_packetout <
+:__packetout:3 p
+:__packetout:2 n
+:__packetout:1 n
+>>

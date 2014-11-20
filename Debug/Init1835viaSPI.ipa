@@ -1,0 +1,166 @@
+IPAF version 1
+Ssef <
+G_Delay sid<
+>>Sptr <
+G_Delay ptr<
+0_|
+1_|
+2_|3_
+3_|
+4_|
+5_|
+6_|
+>>Smust <
+G_Delay ptb<
+>>Scnal <
+_Delay <
+_Delay:1 =100_
+>>Sprpc <
+_Delay <
+>>Ssef <
+G_DisableSPI1835 sid<
+>>Sptr <
+G_DisableSPI1835 ptr<
+0_|
+1_|
+2_|
+>>Smust <
+G_DisableSPI1835 ptb<
+>>Scnal <
+_DisableSPI1835 <
+>>Sprpc <
+_DisableSPI1835 <
+>>Ssef <
+G_SetupSPI1835 sid<
+>>Sptr <
+G_SetupSPI1835 ptr<
+0_|
+1_|
+2_|
+>>Smust <
+G_SetupSPI1835 ptb<
+>>Scnal <
+_SetupSPI1835 <
+>>Sprpc <
+_SetupSPI1835 <
+>>Ssef <
+G_Configure1835Register sid<
+DG_Delay 
+15_
+16_
+>>Sptr <
+G_Configure1835Register ptr<
+0_|
+1_|
+2_|3_
+3_|6_
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|3_
+16_|3_
+>>Smust <
+G_Configure1835Register ptb<
+G_Delay t
+>>Scnal <
+_Configure1835Register <
+_Configure1835Register:1 ?
+>>Sprpc <
+_Configure1835Register <
+_Delay:1 p
+>>Ssef <
+G_Get1835Register sid<
+DG_Delay 
+16_
+17_
+>>Sptr <
+G_Get1835Register ptr<
+0_|
+1_|
+2_|3_
+3_|6_
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|3_
+12_|
+13_|
+14_|
+15_|
+16_|3_
+17_|3_
+>>Smust <
+G_Get1835Register ptb<
+G_Delay t
+>>Scnal <
+_Get1835Register <
+_Get1835Register:1 ?
+>>Sprpc <
+_Get1835Register <
+_Delay:1 p
+>>Ssef <
+G_Init1835viaSPI sid<
+DG_SetupSPI1835 
+28_
+29_
+DG_Configure1835Register 
+26_
+27_
+DG_DisableSPI1835 
+24_
+25_
+>>Sptr <
+G_Init1835viaSPI ptr<
+0_|
+1_|
+2_|
+3_|
+4_|8_
+5_17_|4_
+6_18_9_|
+7_10_19_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|
+15_|
+16_|
+17_|
+18_|
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|5_
+25_|5_
+26_|5_
+27_|5_
+28_|5_
+29_|5_
+>>Smust <
+G_Init1835viaSPI ptb<
+G_DisableSPI1835 t
+G_Configure1835Register 
+G_SetupSPI1835 t
+>>Scnal <
+_Init1835viaSPI <
+>>Sprpc <
+_Init1835viaSPI <
+_Configure1835Register:1 n
+>>

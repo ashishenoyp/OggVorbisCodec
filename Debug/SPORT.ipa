@@ -1,0 +1,99 @@
+IPAF version 1
+Ssef <
+G_SPORT_off sid<
+>>Sptr <
+G_SPORT_off ptr<
+0_|
+1_|
+2_|
+>>Smust <
+G_SPORT_off ptb<
+>>Scnal <
+_SPORT_off <
+>>Sprpc <
+_SPORT_off <
+>>Ssef <
+G_ISR sid<
+>>Sptr <
+G_ISR ptr<
+0_|
+1_|2_
+2_|
+3_5_|
+4_6_|
+5_|
+6_|
+>>Smust <
+G_ISR ptb<
+>>Scnal <
+_ISR <
+_reading [1_1_?
+_reading [0_1_?
+>>Sprpc <
+_ISR <
+>>Ssef <
+G_initSPORT sid<
+>>Sptr <
+G_initSPORT ptr<
+0_|
+1_|11_4_0_
+2_|
+3_|
+4_|
+5_|
+6_|1_
+7_|
+8_|
+9_|11_
+10_|
+11_|
+>>Smust <
+G_initSPORT ptb<
+>>Scnal <
+_initSPORT <
+_initSPORT:1 ?
+>>Sprpc <
+_initSPORT <
+>>Ssef <
+G_init_DAI sid<
+>>Sptr <
+G_init_DAI ptr<
+0_|
+1_|
+2_|
+>>Smust <
+G_init_DAI ptb<
+>>Scnal <
+_init_DAI <
+>>Sprpc <
+_init_DAI <
+>>Ssef <
+G_write_buffer sid<
+>>Sptr <
+G_write_buffer ptr<
+0_|
+1_|
+2_|3_
+3_11_12_|14_
+4_|
+5_|
+6_|
+7_|3_
+8_|
+9_|
+10_|14_
+11_|
+12_|
+13_|
+14_|
+>>Smust <
+G_write_buffer ptb<
+>>Scnal <
+_write_buffer <
+_buf_no ?
+_ind ?
+_write_buffer:1 [3_1_?
+_write_buffer:1 ?
+>>Sprpc <
+_write_buffer <
+>>

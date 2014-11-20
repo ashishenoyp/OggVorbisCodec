@@ -1,0 +1,224 @@
+IPAF version 1
+Ssef <
+G_incr_ptr_nochange sid<
+>>Sptr <
+G_incr_ptr_nochange ptr<
+0_|
+1_|
+2_3_8_9_|
+3_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+>>Smust <
+G_incr_ptr_nochange ptb<
+>>Scnal <
+_incr_ptr_nochange <
+_incr_ptr_nochange:1 ?
+_incr_ptr_nochange:2 ?
+>>Sprpc <
+_incr_ptr_nochange <
+>>Ssef <
+G_incr_ptr sid<
+>>Sptr <
+G_incr_ptr ptr<
+0_|
+1_|
+2_|14_13_
+3_4_|14_13_
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|14_
+14_|
+>>Smust <
+G_incr_ptr ptb<
+>>Scnal <
+_incr_ptr <
+_incr_ptr:1 [1_1_?
+_incr_ptr:1 ?
+_incr_ptr:2 ?
+>>Sprpc <
+_incr_ptr <
+>>Ssef <
+G_putbyte sid<
+>>Sptr <
+G_putbyte ptr<
+0_|
+1_|
+2_|
+3_4_5_8_|
+4_|
+5_|
+6_|
+7_|
+8_|
+9_|
+10_|
+>>Smust <
+G_putbyte ptb<
+>>Scnal <
+_putbyte <
+_putbyte:1 [1_1_?
+_putbyte:1 ?
+_putbyte:2 ?
+>>Sprpc <
+_putbyte <
+>>Ssef <
+G_getbyte sid<
+>>Sptr <
+G_getbyte ptr<
+0_|
+1_|
+2_|
+3_|
+4_|
+5_|6_
+6_|
+7_|
+8_|
+>>Smust <
+G_getbyte ptb<
+>>Scnal <
+_getbyte <
+_getbyte:1 [1_1_?
+_getbyte:1 ?
+>>Sprpc <
+_getbyte <
+>>Ssef <
+G_incr_ptr_putbyte sid<
+DG_incr_ptr 
+42_
+43_
+DG_putbyte 
+40_
+41_
+>>Sptr <
+G_incr_ptr_putbyte ptr<
+0_|
+1_|
+2_|10_
+3_4_7_15_27_39_|45_44_
+4_|
+5_31_28_19_16_11_8_|
+6_9_12_17_20_29_32_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|18_
+15_|
+16_|
+17_|
+18_|3_
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|45_44_10_
+25_|
+26_|3_30_
+27_|
+28_|
+29_|
+30_|3_
+31_|
+32_|
+33_|
+34_|
+35_|
+36_|
+37_|
+38_|
+39_|
+40_|2_3_
+41_|3_
+42_|24_
+43_|24_
+44_|45_
+45_|
+>>Smust <
+G_incr_ptr_putbyte ptb<
+G_putbyte t
+G_incr_ptr t
+>>Scnal <
+_incr_ptr_putbyte <
+_incr_ptr_putbyte:1 ?
+_incr_ptr_putbyte:2 ?
+_incr_ptr_putbyte:3 ?
+>>Sprpc <
+_incr_ptr_putbyte <
+_putbyte:2 n
+_putbyte:1 n
+_incr_ptr:2 n
+_incr_ptr:1 n
+>>Ssef <
+G_incr_ptr_getbyte sid<
+DG_incr_ptr 
+30_
+31_
+>>Sptr <
+G_incr_ptr_getbyte ptr<
+0_|
+1_|
+2_|33_32_10_
+3_4_7_15_27_|33_32_
+4_|
+5_28_19_16_11_8_|
+6_9_12_17_20_29_|
+7_|
+8_|
+9_|
+10_|
+11_|
+12_|
+13_|
+14_|3_18_
+15_|
+16_|
+17_|
+18_|3_
+19_|
+20_|
+21_|
+22_|
+23_|
+24_|
+25_|
+26_|3_
+27_|
+28_|
+29_|
+30_|2_
+31_|2_
+32_|33_
+33_|
+>>Smust <
+G_incr_ptr_getbyte ptb<
+G_incr_ptr t
+>>Scnal <
+_incr_ptr_getbyte <
+_incr_ptr_getbyte:1 ?
+_incr_ptr_getbyte:2 ?
+>>Sprpc <
+_incr_ptr_getbyte <
+_incr_ptr:2 n
+_incr_ptr:1 n
+>>
