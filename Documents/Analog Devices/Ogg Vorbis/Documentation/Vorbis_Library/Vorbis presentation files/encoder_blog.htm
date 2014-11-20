@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head><title>[vorbis] encoder block diagram</title>
+
+ 
+   
+   <link rel="Index" href="http://lists.xiph.org/pipermail/vorbis/2003-March/index.html">
+   <link rel="made" href="mailto:vorbis%40xiph.org?Subject=%5Bvorbis%5D%20encoder%20block%20diagram&amp;In-Reply-To=">
+   <meta name="robots" content="index,nofollow">
+   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <link rel="Previous" href="http://lists.xiph.org/pipermail/vorbis/2003-March/022753.html">
+   <link rel="Next" href="http://lists.xiph.org/pipermail/vorbis/2003-March/022763.html"></head><body bgcolor="#ffffff">
+   <h1>[vorbis] encoder block diagram</h1>
+    <b>stoffke at directbox.com</b> 
+    <a href="mailto:vorbis%40xiph.org?Subject=%5Bvorbis%5D%20encoder%20block%20diagram&amp;In-Reply-To=" title="[vorbis] encoder block diagram">stoffke at directbox.com
+       </a><br>
+    <i>Wed Mar 12 14:53:45 PST 2003</i>
+    <p></p><ul>
+        <li>Previous message: <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/022753.html">[vorbis] encoder block diagram
+</a></li>
+        <li>Next message: <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/022763.html">[vorbis] encoder block diagram
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/date.html#10201">[ date ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/thread.html#10201">[ thread ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/subject.html#10201">[ subject ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/author.html#10201">[ author ]</a>
+         </li>
+       </ul>
+    <hr>  
+<!--beginarticle-->
+<pre>
+I've made a block diagram of the encoder because I tried to find out, how it works
+
+<a href="http://stoffke.freeshell.65535.net/ogg/block.html">http://stoffke.freeshell.65535.net/ogg/block.html</a>
+
+Although there are specifiation docs, that give very
+detailed information about single aspects of the encoding (or decoding) ,
+I'm missing documenations that give a more general overview,
+about how the encoder works.
+(Vorbis Illuminated seems a bit outdated, as well as on2)
+
+Here is a brief description of encoding process (as I understood it)
+
+WINDOWING
+- Vorbis uses overlapping windows with sizes between 64 and 8192 Samples (powers of two)
+- short blocks and one long blocks are used (short blocks must be smaller or equal to long blocks), can be set to any allowed size
+- selected window size depends on bitrate
+
+MDCT
+- transforms audio data to frequency domain
+
+PSYCHOACOUSTIC MODEL
+- Vorbis uses its own psychoacoustic model
+- FFT for tonal analys and MDCT for noise analysis
+
+Floor
+- a psychoacoustic floor is created from the data, given from the
+psychacoustic model
+- the floor is a spectral envelope and represents a low resolution
+model of the audio spectrum
+- floor type 0 uses LSP and floortyp 1 a linear interpolation algorithm
+to compute the floor curve
+? currently only floor type 1 is used
+? don't know whether the MDCT input for the psychoacoustic model come from  MDCT
+above or an extra MDCT is performed (would that make sense at all ?)
+- the floor data are then subtracted (amplitude-wise) from the MDCT data creating a "residue"
+- the residue represents the spectral fine structure of the audio signal
+
+CHANNEL COUPLING
+- channel coupling reduces the redundacy of left and right channel
+- it works good, because there's a high correlation between the floor curves of both channels
+- Vorbis has different types of stereo models: dual stereo, lossless stereo (- q 6 to -q 10),
+phase stereo and a mixed stereo (all the modes together)
+? although vorbis supports up to 255 channels, there's no channel coupling  in streams
+more than 2 channels (yet)
+? not sure about the position of channel coupling in the diagram
+
+VECTOR QUANTIZATION
+- the floor data and the residues are vector quantized by using
+custom codebooks
+- codebooks are adaptive and are "trained"
+
+HUFFMAN
+- the vector - codewords are then huffman-coded to minimize redundancy
+
+finally the data are then packed into a bitstream
+
+Please correct or comment the diagram and the description.
+
+I'm not skilled in C , so I can't "read" the sourcecode.
+But I tried to get the information from the specs,
+and the mailing lists was also helpful.
+
+I need information about vorbis for my diploma thesis.
+
+Thanks a lot
+
+Stoffke
+
+&lt;p&gt;--- &gt;8 ----
+List archives:  <a href="http://www.xiph.org/archives/">http://www.xiph.org/archives/</a>
+Ogg project homepage: <a href="http://www.xiph.org/ogg/">http://www.xiph.org/ogg/</a>
+To unsubscribe from this list, send a message to '<a href="http://lists.xiph.org/mailman/listinfo/vorbis">vorbis-request at xiph.org</a>'
+containing only the word 'unsubscribe' in the body.  No subject is needed.
+Unsubscribe messages sent to the list will be ignored/filtered.
+
+</pre>
+
+<!--endarticle-->
+    <hr>
+    <p></p><ul>
+        <!--threads-->
+	<li>Previous message: <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/022753.html">[vorbis] encoder block diagram
+</a></li>
+	<li>Next message: <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/022763.html">[vorbis] encoder block diagram
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/date.html#10201">[ date ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/thread.html#10201">[ thread ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/subject.html#10201">[ subject ]</a>
+              <a href="http://lists.xiph.org/pipermail/vorbis/2003-March/author.html#10201">[ author ]</a>
+         </li>
+       </ul>
+
+<hr>
+<a href="http://lists.xiph.org/mailman/listinfo/vorbis">More information about the Vorbis
+mailing list</a><br>
+
+</body></html>

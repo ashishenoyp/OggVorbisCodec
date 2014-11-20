@@ -1,0 +1,635 @@
+<html><head>
+
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Nam Phamdo"><title>Vector Quantization</title></head><body alink="#ff0000" bgcolor="#ffffff" link="#0000ee" text="#000000" vlink="#551a8b">
+<!-- *********************THIS IS THE TOP MENU BAR *********************-->
+<hr width="100%">
+<center><table nosave="" bgcolor="#3333ff" cellspacing="0" cols="8" width="100%">
+<tbody><tr nosave="">
+<td nosave="">
+<center><a href="http://data-compression.com/index.shtml"><font color="#ffffff">Home</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/theory.shtml"><font color="#ffffff">Theory</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/lossless.shtml"><font color="#ffffff">Lossless</font></a></center>
+</td>
+
+<td>
+<center><b><font color="#ff9900">VQ</font></b></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/speech.shtml"><font color="#ffffff">Speech</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/image.shtml"><font color="#ffffff">Image</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/download.shtml"><font color="#ffffff">Download</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/links.shtml"><font color="#ffffff">Links</font></a></center>
+</td>
+</tr>
+</tbody></table></center>
+
+<center>
+<hr width="100%">
+<!--img src="undercon.gif" align=center-->
+<!--We are still under construction-->
+<!--img src="undercon.gif" align=center-->
+<!-- *********************THIS IS THE DATA-COMPRESSION LOGO *********************-->
+<img src="vq_files/dclogo3.gif" alt="Data-Compression.com" align="middle" height="102" width="681">
+<hr width="100%">
+</center>
+
+<table nosave="" cellpadding="0" cellspacing="5" width="100%">
+<tbody><tr nosave="">
+<td align="center" bgcolor="#000099" valign="top" width="140">
+<!--#include file="bluebar.inc"-->
+</td>
+
+<td nosave="" valign="top">
+<!-- ****************THIS IS THE MAIN BODY OF THE PAGE****************-->
+<!-- MAIN BODY-->
+<hr width="100%">
+<center><b><font size="+4">Vector Quantization</font></b></center>
+
+<hr width="100%">
+<b><font size="+2">Contents</font></b>
+<ol type="I">
+<li>
+<a href="#intro">Introduction</a></li>
+
+<li>
+<a href="#prelim">Preliminaries</a></li>
+
+<li>
+<a href="#problem">Design Problem</a></li>
+
+<li>
+<a href="#criteria">Optimality Criteria</a></li>
+
+<li>
+<a href="#lbg">LBG Design Algorithm</a></li>
+
+<li>
+<a href="#animation">Two-Dimensional Animation</a></li>
+
+<li>
+<a href="#performance">Performance</a></li>
+
+<li>
+<a href="#references">References</a></li>
+
+</ol>
+
+<hr width="100%">
+<p><a name="intro"></a><b><font size="+2">I. Introduction</font></b>
+<br>&nbsp;
+Vector quantization (VQ) is a lossy data compression method based
+on the <a href="http://data-compression.com/theory.shtml#theory">principle of block coding</a>.
+It is a fixed-to-fixed length algorithm.  In the earlier days,
+the design of a vector quantizer (VQ) is considered to be a challenging
+problem due to the need for multi-dimensional integration.  In 1980,
+Linde, Buzo, and Gray (LBG) proposed a VQ design algorithm based
+on a training sequence.  The use of a training sequence bypasses
+the need for multi-dimensional integration.  A VQ that is designed
+using this algorithm are referred to in the literature as an LBG-VQ.
+
+</p><p><a name="prelim"></a><b><font size="+2">II. Preliminaries</font></b>
+<br>&nbsp;
+A VQ is nothing more than an approximator.  The idea is similar to that
+of ``rounding-off'' (say to the nearest integer).  An example of
+a 1-dimensional VQ is shown below:
+</p><center>
+<img src="vq_files/vq-1D.gif" alt="1-dimensional VQ" height="67" width="445">
+</center>
+Here, every number less than -2 are approximated by -3.
+Every number between -2 and 0 are approximated by -1.
+Every number between 0 and 2 are approximated by +1.
+Every number greater than 2 are approximated by +3.
+Note that the approximate values are uniquely represented by 2 bits.
+This is a 1-dimensional, 2-bit VQ.  It has a rate of 2 bits/dimension.
+
+<p>An example of a 2-dimensional VQ is shown below:
+</p><center>
+<img src="vq_files/vq-2D.gif" alt="2-D VQ" height="400" width="400">
+</center>
+Here, every pair of numbers falling in a particular region
+are approximated by a red star associated with that region.
+Note that there are 16 regions and 16 red stars -- each of which
+can be uniquely represented by 4 bits.  Thus, this is a 2-dimensional,
+4-bit VQ.  Its rate is also 2 bits/dimension.
+
+<p>In the above two examples, the red stars are called <i>codevectors</i>
+and the regions defined by the blue borders are called <i>encoding
+regions</i>.  The set of all codevectors is called the <i>codebook</i>
+and the set of all encoding regions is called the <i>partition</i> of
+the space.
+
+</p><p><a name="problem"></a><b><font size="+2">III. Design Problem</font></b>
+<br>&nbsp;
+The VQ design problem can be stated as follows.  Given a vector
+source with its statistical properties known, given a
+<a href="http://data-compression.com/theory.shtml#rd">distortion measure</a>, and given the
+number of codevectors, find a codebook (the set of all red stars)
+and a partition (the set of blue lines) which result in the
+smallest average distortion.
+
+</p><p>We assume that there is a <i>training sequence</i>
+consisting of <img src="vq_files/eqn078.png" align="middle" height="24" width="23"> source vectors:
+</p><center>
+<img src="vq_files/eqn079.png" align="middle" height="27" width="162">
+</center>
+This training sequence can be obtained from some large database.
+For example, if the source is a speech signal, then the training
+sequence can be obtained by recording several long telephone conversations.
+<img src="vq_files/eqn078.png" align="middle" height="24" width="23"> is assumed to be sufficiently large so that all the
+statistical properties of the source are captured by the training sequence.
+We assume that the source vectors are <img src="vq_files/eqn080.png" align="middle" height="24" width="16">-dimensional, e.g.,
+<center>
+<img src="vq_files/eqn081.png" align="middle" height="27" width="338">
+</center>
+Let <img src="vq_files/eqn082.png" align="middle" height="24" width="20"> be the number of codevectors and let
+<center>
+<img src="vq_files/eqn083.png" align="middle" height="27" width="152">
+</center>
+represents the codebook.  Each codevector is <img src="vq_files/eqn080.png" align="middle" height="24" width="16">-dimensional, e.g.,
+<center>
+<img src="vq_files/eqn084.png" align="middle" height="27" width="309">
+</center>
+Let <img src="vq_files/eqn085.png" align="middle" height="24" width="23"> be the encoding region associated with codevector
+<img src="vq_files/eqn086.png" align="middle" height="16" width="20"> and let
+<center>
+<img src="vq_files/eqn087.png" align="middle" height="27" width="160">
+</center>
+denote the partition of the space.  If the source vector
+<img src="vq_files/eqn088.png" align="middle" height="16" width="26"> is in the encoding region <img src="vq_files/eqn085.png" align="middle" height="24" width="23">, then
+its approximation (denoted by <img src="vq_files/eqn089.png" align="middle" height="27" width="49">) is <img src="vq_files/eqn086.png" align="middle" height="16" width="20">:
+<center>
+<img src="vq_files/eqn090.png" align="middle" height="27" width="196">
+</center>
+Assuming a <a href="http://data-compression.com/theory.shtml#rd">squared-error distortion measure</a>,
+the average distortion is given by:
+<center>
+<img src="vq_files/eqn091.png" align="middle" height="60" width="237">
+</center>
+where <img src="vq_files/eqn092.png" align="middle" height="29" width="182">.
+The design problem can be succinctly stated as follows:
+Given <img src="vq_files/eqn093.png" align="middle" height="24" width="17"> and <img src="vq_files/eqn082.png" align="middle" height="24" width="20">, find
+<img src="vq_files/eqn094.png" align="middle" height="24" width="16"> and <img src="vq_files/eqn095.png" align="middle" height="24" width="17"> such that <img src="vq_files/eqn096.png" align="middle" height="24" width="37">
+is minimized.
+
+
+
+<p><a name="criteria"></a><b><font size="+2">IV. Optimality Criteria</font></b>
+<br>&nbsp;
+If <img src="vq_files/eqn094.png" align="middle" height="24" width="16"> and <img src="vq_files/eqn095.png" align="middle" height="24" width="17"> are a solution to the above
+minimization problem, then it must satisfied the following two
+criteria.
+
+</p><ul>
+<li><b><font color="#0000ff">Nearest Neighbor Condition:</font></b>
+<center>
+<img src="vq_files/eqn097.png" align="middle" height="29" width="388">
+</center>
+This condition says that the encoding region <img src="vq_files/eqn085.png" align="middle" height="24" width="23"> should consists
+of all vectors that are closer to <img src="vq_files/eqn086.png" align="middle" height="16" width="20"> than any of the other
+codevectors.  For those vectors lying on the boundary (blue lines), any
+tie-breaking procedure will do.</li>
+
+<li><b><font color="#0000ff">Centroid Condition:</font></b>
+<center>
+<img src="vq_files/eqn098.png" align="middle" height="51" width="252">
+</center>
+This condition says that the codevector <img src="vq_files/eqn086.png" align="middle" height="16" width="20"> should be
+average of all those training vectors that are in encoding
+region <img src="vq_files/eqn085.png" align="middle" height="24" width="23">.  In implementation, one should ensure that
+at least one training vector belongs to each encoding region
+(so that the denominator in the above equation is never 0).
+</li></ul>
+
+
+<br>&nbsp;
+<p><a name="lbg"></a><b><font size="+2">V. LBG Design Algorithm</font></b>
+<br>&nbsp;
+The LBG VQ design algorithm is an iterative algorithm which
+alternatively solves the above two optimality criteria.
+The algorithm requires an initial codebook <img src="vq_files/eqn099.png" align="middle" height="34" width="28">.  This
+initial codebook is obtained by the <i>splitting</i> method.
+In this method, an initial codevector is set as the
+average of the entire training sequence.  This codevector
+is then split into two.  The iterative algorithm is run with these
+two vectors as the initial codebook.  The final two codevectors are
+splitted into four and the process is repeated until the desired number
+of codevectors is obtained.  The algorithm is summarized below.
+
+
+
+<br>&nbsp;
+<br>&nbsp;
+<b>LBG Design Algorithm</b>
+</p><ol>
+<li>Given <img src="vq_files/eqn093.png" align="middle" height="24" width="17">.  Fixed <img src="vq_files/eqn100.png" align="middle" height="25" width="41">
+to be a ``small'' number.</li>
+
+<li>Let <img src="vq_files/eqn101.png" align="middle" height="24" width="48"> and
+<center>
+<img src="vq_files/eqn102.png" align="middle" height="60" width="118">
+</center>
+Calculate
+<center>
+<img src="vq_files/eqn103.png" align="middle" height="60" width="205">
+</center>
+
+</li><li><b><font color="#0000ff">Splitting:</font></b>
+For <img src="vq_files/eqn104.png" align="middle" height="25" width="109">, set
+<center>
+<img src="vq_files/eqn105.png" align="middle" height="56" width="151">
+</center>
+Set <img src="vq_files/eqn106.png" align="middle" height="24" width="65">.
+
+</li><li><b><font color="#0000ff">Iteration:</font></b>
+Let <img src="vq_files/eqn107.png" align="middle" height="33" width="91">.  Set the iteration index
+<img src="vq_files/eqn108.png" align="middle" height="24" width="40">.
+
+	<ol type="i">
+	<li>For <img src="vq_files/eqn109.png" align="middle" height="25" width="121">, find the minimum value of
+	<center>
+	<img src="vq_files/eqn110.png" align="middle" height="33" width="97">
+	</center>
+	over all <img src="vq_files/eqn111.png" align="middle" height="25" width="115">.  Let <img src="vq_files/eqn112.png" align="middle" height="24" width="21"> be the
+	index which achieves the minimum.  Set
+	<center>
+	<img src="vq_files/eqn113.png" align="middle" height="35" width="99">
+	</center>
+	</li>
+
+	<li>For <img src="vq_files/eqn111.png" align="middle" height="25" width="115">, update the codevector
+	<center>
+	<img src="vq_files/eqn114.png" align="middle" height="58" width="169">
+	</center>
+	</li>
+
+	<li>Set <img src="vq_files/eqn115.png" align="middle" height="25" width="65">.
+	</li>
+
+	<li>Calculate
+	<center>
+	<img src="vq_files/eqn116.png" align="middle" height="60" width="237">
+	</center>
+	</li>
+
+	<li>If <img src="vq_files/eqn117.png" align="middle" height="33" width="192">,
+	go back to Step (i).</li>
+
+	<li>Set <img src="vq_files/eqn118.png" align="middle" height="33" width="91">.  For <img src="vq_files/eqn111.png" align="middle" height="25" width="115">,
+	set
+	<center>
+	<img src="vq_files/eqn119.png" align="middle" height="33" width="63">
+	</center>
+	as the final codevectors.
+	</li>
+	</ol>
+
+
+</li><li>Repeat Steps 3 and 4 until the desired number of codevectors is obtained.
+</li></ol>
+
+
+<p><a name="animation"></a><b><font size="+2">VI. Two-Dimensional Animation</font></b>
+
+<br>&nbsp;
+</p><center>
+<a href="http://data-compression.com/vqanim.shtml"><img src="vq_files/lbgvq.gif" alt="2-D VQ animation" height="400" width="400"></a>
+</center>
+
+<center>
+<font size="+2">Click on the figure above to begin the animation</font>
+</center>
+
+<ul>
+<li>If the animation appears to be stuck, try moving up or down
+the page in your browser.
+</li>
+
+<li>The source for the above is a memoryless Gaussian source
+with zero-mean and unit variance.
+</li>
+
+<li>The tiny green dots are training vectors --- there are 4096 of them.
+</li>
+
+<li>The LBG design algorithm is run with <img src="vq_files/eqn120.png" align="middle" height="24" width="69">.
+</li>
+
+<li>The algorithm guarantees a locally optimal solution.
+</li>
+
+<li>The size of the training sequence should be sufficiently large.
+It is recommended that <img src="vq_files/eqn121.png" align="middle" height="24" width="92">.
+</li>
+</ul>
+
+
+
+<p><a name="performance"></a><b><font size="+2">VI. Performance</font></b>
+
+<br>&nbsp;
+The performance of VQ are typically given in terms of the
+signal-to-distortion ratio (<i>SDR</i>):
+</p><center>
+<img src="vq_files/eqn122.png" align="middle" height="51" width="152"> (in dB),
+</center>
+where <img src="vq_files/eqn123.png" align="middle" height="30" width="20"> is the variance of the source and
+<img src="vq_files/eqn096.png" align="middle" height="24" width="37"> is the average squared-error distortion.
+The higher the <i>SDR</i> the better the performance.  The following
+tables show the performance of the LBG-VQ for the
+memoryless Gaussian source and the first-order Gauss-Markov
+source with correlation coefficient 0.9.  Comparisons
+are made with the optimal performance theoretically
+attainable, <i>SDR<sub>opt</sub></i>, which is obtained by
+evaluating the <a href="http://data-compression.com/theory.shtml#rd">rate-distortion function</a>.
+<br>&nbsp;
+
+<center>
+<table border="10" rules="groups">
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<thead>
+<tr>
+<td align="center">Rate</td>
+<td colspan="8" align="center"><i>SDR</i> (in dB)</td>
+<td align="center"><i>SDR<sub>opt</sub></i></td>
+</tr>
+<tr>
+<td align="center">(bits/dimension)</td>
+<td align="center"><img src="vq_files/eqn124.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn125.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn126.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn127.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn128.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn129.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn130.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn131.png" align="middle" height="24" width="51"></td>
+<td align="center"><img src="vq_files/eqn132.png" align="middle" height="16" width="53"></td>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">4.4</td>
+<td align="center">4.4</td>
+<td align="center">4.5</td>
+<td align="center">4.7</td>
+<td align="center">4.8</td>
+<td align="center">4.8</td>
+<td align="center">4.9</td>
+<td align="center">5.0</td>
+<td align="center">6.0</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">9.3</td>
+<td align="center">9.6</td>
+<td align="center">9.9</td>
+<td align="center">10.2</td>
+<td align="center">10.3</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">12.0</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">14.6</td>
+<td align="center">15.3</td>
+<td align="center">15.7</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">18.1</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">20.2</td>
+<td align="center">21.1</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">24.1</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">26.0</td>
+<td align="center">27.0</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">30.1</td>
+</tr>
+
+</tbody><tfoot>
+<tr><td colspan="10" align="center"><i>Memoryless Gaussian Source</i></td></tr>
+</tfoot>
+</table>
+</center>
+
+
+
+<center>
+<table border="10" rules="groups">
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<thead>
+<tr>
+<td align="center">Rate</td>
+<td colspan="8" align="center"><i>SDR</i> (in dB)</td>
+<td align="center"><i>SDR<sub>opt</sub></i></td>
+</tr>
+<tr>
+<td align="center">(bits/dimension)</td>
+<td align="center"><img src="vq_files/eqn124.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn125.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn126.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn127.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn128.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn129.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn130.png" align="middle" height="24" width="44"></td>
+<td align="center"><img src="vq_files/eqn131.png" align="middle" height="24" width="51"></td>
+<td align="center"><img src="vq_files/eqn132.png" align="middle" height="16" width="53"></td>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">4.4</td>
+<td align="center">7.8</td>
+<td align="center">9.4</td>
+<td align="center">10.2</td>
+<td align="center">10.7</td>
+<td align="center">11.0</td>
+<td align="center">11.4</td>
+<td align="center">11.6</td>
+<td align="center">13.2</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">9.3</td>
+<td align="center">13.6</td>
+<td align="center">15.0</td>
+<td align="center">15.8</td>
+<td align="center">16.2</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">19.3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">14.6</td>
+<td align="center">19.0</td>
+<td align="center">20.6</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">25.3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">20.2</td>
+<td align="center">24.8</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">31.3</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">26.0</td>
+<td align="center">30.7</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">----</td>
+<td align="center">37.3</td>
+</tr>
+</tbody><tfoot>
+<tr><td colspan="10" align="center"><i>First-Order Gauss-Markov Source with Correlation 0.9</i></td></tr>
+</tfoot>
+</table>
+</center>
+
+
+
+
+
+
+
+
+
+<p><a name="references"></a><b><font size="+2">VIII. References</font></b>
+
+</p><ol>
+<li>A. Gersho and R. M. Gray,
+<a href="http://www.amazon.com/exec/obidos/ASIN/0792391810/datacompcomawebs">
+Vector Quantization and Signal Compression</a>.</li>
+
+<li>H. Abut,
+<a href="http://www.amazon.com/exec/obidos/ASIN/0879422653/datacompcomawebs">
+Vector Quantization</a>.</li>
+
+<li>R. M. Gray, ``Vector Quantization,'' <i>IEEE ASSP Magazine</i>, pp. 4--29,
+April 1984.</li>
+
+<li>Y. Linde, A. Buzo, and R. M. Gray, ``An Algorithm for Vector
+Quantizer Design,'' <i>IEEE Transactions on Communications,</i> pp. 702--710,
+January 1980.</li>
+</ol>
+
+
+<br>&nbsp;
+
+<hr width="100%">
+<img src="vq_files/contacts.png" height="60" width="217">
+<hr width="100%">
+
+
+
+<!-- END MAIN BODY-->
+
+
+<!-- ****************END OF BODY****************-->
+</td>
+</tr>
+</tbody></table>
+
+<hr width="100%">
+<!-- *********************THIS IS THE TOP MENU BAR *********************-->
+<center><table nosave="" bgcolor="#3333ff" cellspacing="0" cols="8" width="100%">
+<tbody><tr nosave="">
+<td nosave="">
+<center><a href="http://data-compression.com/index.shtml"><font color="#ffffff">Home</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/theory.shtml"><font color="#ffffff">Theory</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/lossless.shtml"><font color="#ffffff">Lossless</font></a></center>
+</td>
+
+<td>
+<center><b><font color="#ff9900">VQ</font></b></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/speech.shtml"><font color="#ffffff">Speech</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/image.shtml"><font color="#ffffff">Image</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/download.shtml"><font color="#ffffff">Download</font></a></center>
+</td>
+
+<td>
+<center><a href="http://data-compression.com/links.shtml"><font color="#ffffff">Links</font></a></center>
+</td>
+</tr>
+</tbody></table></center>
+
+<!--#include file="bottom.inc"-->
+
+</body></html>
